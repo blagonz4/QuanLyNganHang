@@ -1,0 +1,33 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+using QuanLyNganHang.GUI_QLNN.User_Control;
+
+namespace QuanLyNganHang.GUI_QLNN
+{
+    public partial class frm_BoPhanTaiChinh : Form
+    {
+        public frm_BoPhanTaiChinh()
+        {
+            InitializeComponent();
+        }
+
+        private void btnDanhsachkhachhang_Click(object sender, EventArgs e)
+        {
+            if (!pnlMainBPTC.Controls.Contains(us_DanhSachKhachHang.Instance))
+            {
+                pnlMainBPTC.Controls.Add(us_DanhSachKhachHang.Instance);
+                us_DanhSachKhachHang.Instance.Dock = DockStyle.Fill;
+                us_DanhSachKhachHang.Instance.BringToFront();
+            }
+            else
+                us_DanhSachKhachHang.Instance.BringToFront();
+        }
+    }
+}
