@@ -1,0 +1,217 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DC07A9F2-6F6F-47AE-BCC7-1D19A610EAD8}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>QuanLyNganHang</RootNamespace>
+    <AssemblyName>QuanLyNganHang</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MySql.Data, Version=8.0.22.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Program Files\MySQL\v4.8\MySql.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.ConfigurationManager, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Configuration.ConfigurationManager.4.7.0\lib\net461\System.Configuration.ConfigurationManager.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Security.AccessControl, Version=4.1.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.AccessControl.4.7.0\lib\net461\System.Security.AccessControl.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Permissions, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Permissions.4.7.0\lib\net461\System.Security.Permissions.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Security.Principal.Windows, Version=4.1.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Security.Principal.Windows.4.7.0\lib\net461\System.Security.Principal.Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BUS_QLNN\BUS_BaoCaoGiamSat.cs" />
+    <Compile Include="BUS_QLNN\BUS_HoSoVayNo.cs" />
+    <Compile Include="BUS_QLNN\BUS_BienLaiPhatTienVay.cs" />
+    <Compile Include="BUS_QLNN\BUS_BienLaiThuNo.cs" />
+    <Compile Include="BUS_QLNN\BUS_DieuChinhHopDong.cs" />
+    <Compile Include="BUS_QLNN\BUS_DieuKhoan.cs" />
+    <Compile Include="BUS_QLNN\BUS_HopDong.cs" />
+    <Compile Include="BUS_QLNN\BUS_KhachHang.cs" />
+    <Compile Include="BUS_QLNN\BUS_NhanVien.cs" />
+    <Compile Include="BUS_QLNN\BUS_TrangThaiYeuCauVayVon.cs" />
+    <Compile Include="BUS_QLNN\BUS_YeuCauVayVon.cs" />
+    <Compile Include="DAL_QLNN\DAL_BaoCaoGiamSat.cs" />
+    <Compile Include="DAL_QLNN\DAL_HoSoVayNo.cs" />
+    <Compile Include="DAL_QLNN\DAL_TrangThaiYeuCauVayVon.cs" />
+    <Compile Include="DAL_QLNN\DAL_BienLaiPhatTienVay.cs" />
+    <Compile Include="DAL_QLNN\DAL_BienLaiThuNo.cs" />
+    <Compile Include="DAL_QLNN\DAL_DieuChinhHopDong.cs" />
+    <Compile Include="DAL_QLNN\DAL_DieuKhoan.cs" />
+    <Compile Include="DAL_QLNN\DAL_HopDong.cs" />
+    <Compile Include="DAL_QLNN\DAL_KhachHang.cs" />
+    <Compile Include="DAL_QLNN\DAL_NhanVien.cs" />
+    <Compile Include="DAL_QLNN\DAL_YeuCauVayVon.cs" />
+    <Compile Include="DAL_QLNN\HandleDB.cs" />
+    <Compile Include="DTO_QLNN\DTO_BaoCaoGiamSat.cs" />
+    <Compile Include="DTO_QLNN\DTO_BienLaiThuNo.cs" />
+    <Compile Include="DTO_QLNN\DTO_DieuChinhHopDong.cs" />
+    <Compile Include="DTO_QLNN\DTO_DieuKhoan.cs" />
+    <Compile Include="DTO_QLNN\DTO_HopDong.cs" />
+    <Compile Include="DTO_QLNN\DTO_HoSoVayVon.cs" />
+    <Compile Include="DTO_QLNN\DTO_KhachHang.cs" />
+    <Compile Include="DTO_QLNN\DTO_NhanVien.cs" />
+    <Compile Include="DTO_QLNN\DTO_TrangThaiYeuCauVayVon.cs" />
+    <Compile Include="DTO_QLNN\DTO_YeuCauVayVon.cs" />
+    <Compile Include="GUI_QLNN\GUI_BọPhanTaiChinh\frm_BoPhanTaiChinh.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI_QLNN\GUI_BọPhanTaiChinh\frm_BoPhanTaiChinh.Designer.cs">
+      <DependentUpon>frm_BoPhanTaiChinh.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI_QLNN\GUI_BoPhanXetDuyet\frm_BoPhanXetDuyet.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI_QLNN\GUI_BoPhanXetDuyet\frm_BoPhanXetDuyet.Designer.cs">
+      <DependentUpon>frm_BoPhanXetDuyet.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI_QLNN\frm_DangNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI_QLNN\frm_DangNhap.Designer.cs">
+      <DependentUpon>frm_DangNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI_QLNN\GUI_NhanVienTinDung\frm_NhanVienTinDung.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI_QLNN\GUI_NhanVienTinDung\frm_NhanVienTinDung.Designer.cs">
+      <DependentUpon>frm_NhanVienTinDung.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI_QLNN\User Control\us_DanhSachYeuCauVayVon.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI_QLNN\User Control\us_DanhSachYeuCauVayVon.Designer.cs">
+      <DependentUpon>us_DanhSachYeuCauVayVon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI_QLNN\GUI_QuanLyHopDong\frm_QuanLyHopDong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI_QLNN\GUI_QuanLyHopDong\frm_QuanLyHopDong.Designer.cs">
+      <DependentUpon>frm_QuanLyHopDong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI_QLNN\User Control\us_BaoCaoGiamSat.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI_QLNN\User Control\us_BaoCaoGiamSat.Designer.cs">
+      <DependentUpon>us_BaoCaoGiamSat.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI_QLNN\User Control\us_DanhSachHopDong.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI_QLNN\User Control\us_DanhSachHopDong.Designer.cs">
+      <DependentUpon>us_DanhSachHopDong.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI_QLNN\User Control\us_DanhSachKhachHang.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI_QLNN\User Control\us_DanhSachKhachHang.Designer.cs">
+      <DependentUpon>us_DanhSachKhachHang.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="GUI_QLNN\GUI_BọPhanTaiChinh\frm_BoPhanTaiChinh.resx">
+      <DependentUpon>frm_BoPhanTaiChinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI_QLNN\GUI_BoPhanXetDuyet\frm_BoPhanXetDuyet.resx">
+      <DependentUpon>frm_BoPhanXetDuyet.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI_QLNN\frm_DangNhap.resx">
+      <DependentUpon>frm_DangNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI_QLNN\GUI_NhanVienTinDung\frm_NhanVienTinDung.resx">
+      <DependentUpon>frm_NhanVienTinDung.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI_QLNN\GUI_QuanLyHopDong\frm_QuanLyHopDong.resx">
+      <DependentUpon>frm_QuanLyHopDong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI_QLNN\User Control\us_BaoCaoGiamSat.resx">
+      <DependentUpon>us_BaoCaoGiamSat.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI_QLNN\User Control\us_DanhSachHopDong.resx">
+      <DependentUpon>us_DanhSachHopDong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI_QLNN\User Control\us_DanhSachKhachHang.resx">
+      <DependentUpon>us_DanhSachKhachHang.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI_QLNN\User Control\us_DanhSachYeuCauVayVon.resx">
+      <DependentUpon>us_DanhSachYeuCauVayVon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="GUI_QLNN\Logo\logo.jfif" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
