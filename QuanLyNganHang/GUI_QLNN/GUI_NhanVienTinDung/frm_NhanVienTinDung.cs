@@ -14,14 +14,14 @@ namespace QuanLyNganHang.GUI_QLNN
 
         private void btnTaoyeucauvayvon_Click(object sender, EventArgs e)
         {
-            if (!pnlMainNVTD.Controls.Contains(us_DanhSachYeuCauVayVon.Instance))
+            if (!pnlMainNVTD.Controls.Contains(us_TaoYeuCauVayVon.Instance))
             {
-                pnlMainNVTD.Controls.Add(us_DanhSachYeuCauVayVon.Instance);
-                us_DanhSachYeuCauVayVon.Instance.Dock = DockStyle.Fill;
-                us_DanhSachYeuCauVayVon.Instance.BringToFront();
+                pnlMainNVTD.Controls.Add(us_TaoYeuCauVayVon.Instance);
+                us_TaoYeuCauVayVon.Instance.Dock = DockStyle.Fill;
+                us_TaoYeuCauVayVon.Instance.BringToFront();
             }
             else
-                us_DanhSachYeuCauVayVon.Instance.BringToFront();
+                us_TaoYeuCauVayVon.Instance.BringToFront();
         }
 
         private void btnLaphopdong_Click(object sender, EventArgs e)
@@ -31,7 +31,16 @@ namespace QuanLyNganHang.GUI_QLNN
 
         private void btnDanhsachycbihuy_Click(object sender, EventArgs e)
         {
+            us_DanhSachYeuCauVayVon.Instance.dgvDanhSachYCVV.DataSource = BUS_QLNN.BUS_YeuCauVayVon.Instance.getDanhSach();
 
+            if (!pnlMainNVTD.Controls.Contains(us_DanhSachYeuCauVayVon.Instance))
+            {
+                pnlMainNVTD.Controls.Add(us_DanhSachYeuCauVayVon.Instance);
+                us_DanhSachYeuCauVayVon.Instance.Dock = DockStyle.Fill;
+                us_DanhSachYeuCauVayVon.Instance.BringToFront();
+            }
+            else
+                us_DanhSachYeuCauVayVon.Instance.BringToFront();
         }
 
         private void btnLapbaocaogiamsat_Click(object sender, EventArgs e)

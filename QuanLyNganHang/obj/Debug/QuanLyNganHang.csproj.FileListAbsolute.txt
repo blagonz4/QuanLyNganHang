@@ -25,3 +25,5 @@ E:\Nam3\Phát triển bảo trì phần mềm\QuanLyNganHang\QuanLyNganHang\bin\
 E:\Nam3\Phát triển bảo trì phần mềm\QuanLyNganHang\QuanLyNganHang\bin\Debug\System.Security.Principal.Windows.xml
 E:\Nam3\Phát triển bảo trì phần mềm\QuanLyNganHang\QuanLyNganHang\obj\Debug\QuanLyNganHang.csproj.CopyComplete
 E:\Nam3\Phát triển bảo trì phần mềm\QuanLyNganHang\QuanLyNganHang\obj\Debug\QuanLyNganHang.GUI_QLNN.User_Control.us_DanhSachYeuCauVayVon.resources
+E:\Nam3\Phát triển bảo trì phần mềm\QuanLyNganHang\QuanLyNganHang\obj\Debug\QuanLyNganHang.GUI_QLNN.User_Control.us_TaoYeuCauVayVon.resources
+E:\Nam3\Phát triển bảo trì phần mềm\QuanLyNganHang\QuanLyNganHang\obj\Debug\QuanLyNganHang.GUI_QLNN.User_Control.us_LapHopDong.resources

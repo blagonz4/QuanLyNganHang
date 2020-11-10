@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 using QuanLyNganHang.DTO_QLNN;
+using System.Windows.Forms;
+using System.Data;
 
 namespace QuanLyNganHang.DAL_QLNN
 {
@@ -41,8 +43,16 @@ namespace QuanLyNganHang.DAL_QLNN
             int result = HandleDB.Instance.ExecuteNonQuery(AddQuery, param);
             if (result > 0)
             {
-                Console.WriteLine("Thêm CTPN thành công");
+                Console.WriteLine("Thêm YCVV thành công");
             }
+        }
+        public DataTable getDanhSach()
+        {
+            DataTable dt = new DataTable();
+               
+            string LoadQuery = "SELECT * FROM YeuCauVayVon";
+            dt = HandleDB.Instance.ExecuteQuery(LoadQuery, null);
+            return dt;
         }
     }
 }

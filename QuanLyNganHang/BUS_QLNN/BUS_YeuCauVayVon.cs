@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using QuanLyNganHang.DAL_QLNN;
 using QuanLyNganHang.DTO_QLNN;
+using System.Data;
+
 namespace QuanLyNganHang.BUS_QLNN
 {
     class BUS_YeuCauVayVon
@@ -23,6 +25,10 @@ namespace QuanLyNganHang.BUS_QLNN
         public void themYeuCau(DTO_YeuCauVayVon yc)
         {
             DAL_YeuCauVayVon.Instance.themYeuCau(yc);
+        }
+        public DataTable getDanhSach()
+        {
+            return DAL_YeuCauVayVon.Instance.getDanhSach();
         }
     }
 }

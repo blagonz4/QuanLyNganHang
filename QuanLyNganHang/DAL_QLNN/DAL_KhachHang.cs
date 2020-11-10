@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using QuanLyNganHang.DTO_QLNN;
+using QuanLyNganHang.BUS_QLNN;
+using System.Windows.Forms;
 
 namespace QuanLyNganHang.DAL_QLNN
 {

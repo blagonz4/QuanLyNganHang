@@ -22,7 +22,7 @@ namespace QuanLyNganHang.BUS_QLNN
         }
         public void themKhachHang(DTO_KhachHang kh)
         {
-            DAL_QLNN.DAL_KhachHang.themKhachHang(kh);
+            DAL_KhachHang.Instance.themKhachHang(kh);
         }
     }
 }
