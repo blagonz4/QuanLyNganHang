@@ -28,14 +28,14 @@ namespace QuanLyNganHang.GUI_QLNN
         {
             //us_LapHopDong.Instance.dgvDanhSachYCVV.DataSource = BUS_QLNN.BUS_YeuCauVayVon.Instance.getDanhSach();
 
-            if (!pnlMainNVTD.Controls.Contains(us_DanhSachYeuCauVayVon.Instance))
+            if (!pnlMainNVTD.Controls.Contains(us_LapHopDong.Instance))
             {
-                pnlMainNVTD.Controls.Add(us_DanhSachYeuCauVayVon.Instance);
-                us_DanhSachYeuCauVayVon.Instance.Dock = DockStyle.Fill;
-                us_DanhSachYeuCauVayVon.Instance.BringToFront();
+                pnlMainNVTD.Controls.Add(us_LapHopDong.Instance);
+                us_LapHopDong.Instance.Dock = DockStyle.Fill;
+                us_LapHopDong.Instance.BringToFront();
             }
             else
-                us_DanhSachYeuCauVayVon.Instance.BringToFront();
+                us_LapHopDong.Instance.BringToFront();
         }
 
         private void btnDanhsachycbihuy_Click(object sender, EventArgs e)

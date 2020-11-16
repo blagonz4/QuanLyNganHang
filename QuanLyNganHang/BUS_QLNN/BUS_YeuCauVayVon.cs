@@ -34,5 +34,9 @@ namespace QuanLyNganHang.BUS_QLNN
         {
             return DAL_YeuCauVayVon.Instance.suaYeuCau(yc);
         }
+        public DataTable findOne(string cmnd)
+        {
+            return DAL_YeuCauVayVon.Instance.fineOne(cmnd);
+        } 
     }
 }

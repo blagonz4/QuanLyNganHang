@@ -91,6 +91,24 @@ namespace QuanLyNganHang.DAL_QLNN
                 return false;
             }
             return true;
+
+        }
+        public DataTable fineOne(string cmnd)
+        {
+            try
+            {
+                DataTable dt = new DataTable();
+                string LoadQuery = "select KhachHang.cmnd,KhachHang.name,diachi,phone,maYeuCauVayVon,soTienVay,ngayBatDauVay,thoiHanVay,laiSuat,mucDichVayVon " +
+                                    "from YeuCauVayVon, KhachHang " +
+                                    "where YeuCauVayVon.cmnd = '" + cmnd + "' and YeuCauVayVon.cmnd = KhachHang.cmnd; ";
+                dt = HandleDB.Instance.ExecuteQuery(LoadQuery, null);
+                return dt;
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+           
         }
     }
 }

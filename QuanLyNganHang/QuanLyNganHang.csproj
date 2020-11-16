@@ -37,6 +37,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>C:\Program Files\MySQL\v4.8\MySql.Data.dll</HintPath>
     </Reference>
+    <Reference Include="SautinSoft.Document, Version=5.0.10.23, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\sautinsoft.document.5.0.10.23\lib\net461\SautinSoft.Document.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Configuration.ConfigurationManager, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">

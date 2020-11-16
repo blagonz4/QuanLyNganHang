@@ -40,6 +40,7 @@ namespace QuanLyNganHang.GUI_QLNN.User_Control
 
         private void btnsuaYeuCau_Click(object sender, EventArgs e)
         {
+
             frm_SuaYeuCauVayVon frm = new frm_SuaYeuCauVayVon();
             frm.tbKiHan.Text = KiHan;
             frm.tbLaiSuat.Text = LaiSuat;
