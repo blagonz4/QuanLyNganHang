@@ -30,5 +30,9 @@ namespace QuanLyNganHang.BUS_QLNN
         {
             return DAL_YeuCauVayVon.Instance.getDanhSach();
         }
+        public Boolean suaYeuCau(DTO_YeuCauVayVon yc)
+        {
+            return DAL_YeuCauVayVon.Instance.suaYeuCau(yc);
+        }
     }
 }

@@ -27,3 +27,4 @@ E:\Nam3\Phát triển bảo trì phần mềm\QuanLyNganHang\QuanLyNganHang\obj\
 E:\Nam3\Phát triển bảo trì phần mềm\QuanLyNganHang\QuanLyNganHang\obj\Debug\QuanLyNganHang.GUI_QLNN.User_Control.us_DanhSachYeuCauVayVon.resources
 E:\Nam3\Phát triển bảo trì phần mềm\QuanLyNganHang\QuanLyNganHang\obj\Debug\QuanLyNganHang.GUI_QLNN.User_Control.us_TaoYeuCauVayVon.resources
 E:\Nam3\Phát triển bảo trì phần mềm\QuanLyNganHang\QuanLyNganHang\obj\Debug\QuanLyNganHang.GUI_QLNN.User_Control.us_LapHopDong.resources
+E:\Nam3\Phát triển bảo trì phần mềm\QuanLyNganHang\QuanLyNganHang\obj\Debug\QuanLyNganHang.GUI_QLNN.User_Control.frm_SuaYeuCauVayVon.resources

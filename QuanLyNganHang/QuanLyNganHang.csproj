@@ -126,6 +126,12 @@
     <Compile Include="GUI_QLNN\GUI_NhanVienTinDung\frm_NhanVienTinDung.Designer.cs">
       <DependentUpon>frm_NhanVienTinDung.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI_QLNN\User Control\frm_SuaYeuCauVayVon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI_QLNN\User Control\frm_SuaYeuCauVayVon.Designer.cs">
+      <DependentUpon>frm_SuaYeuCauVayVon.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI_QLNN\User Control\us_DanhSachYeuCauVayVon.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -184,6 +190,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI_QLNN\GUI_QuanLyHopDong\frm_QuanLyHopDong.resx">
       <DependentUpon>frm_QuanLyHopDong.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI_QLNN\User Control\frm_SuaYeuCauVayVon.resx">
+      <DependentUpon>frm_SuaYeuCauVayVon.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI_QLNN\User Control\us_BaoCaoGiamSat.resx">
       <DependentUpon>us_BaoCaoGiamSat.cs</DependentUpon>

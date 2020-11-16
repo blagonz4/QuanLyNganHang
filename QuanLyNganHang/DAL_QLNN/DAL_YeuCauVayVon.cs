@@ -54,5 +54,43 @@ namespace QuanLyNganHang.DAL_QLNN
             dt = HandleDB.Instance.ExecuteQuery(LoadQuery, null);
             return dt;
         }
+        public Boolean suaYeuCau(DTO_YeuCauVayVon yc)
+        {
+            try
+            {
+            string UpdateQuery = "";
+            UpdateQuery += "UPDATE YeuCauVayVon SET ";
+            UpdateQuery += "mucDichVayVon = @MucDichVayVon, ";
+            UpdateQuery += "thoiHanVay = @ThoiHanVay, ";
+            UpdateQuery += "soTienVay = @SoTien, ";
+            UpdateQuery += "kiHan = @KiHan,";
+            UpdateQuery += "ngayBatDauVay = @Ngay, ";
+            UpdateQuery += "laiSuat = @LaiSuat,";
+            UpdateQuery += "trangThai = @TrangThai ";
+            UpdateQuery += "WHERE maYeuCauVayVon = @MaYC ";
+            //DataTable dt = ObjThuocBLL.Instance.GetInfoByName(((frmMain)main).tb_tenThuoc.Text);
+
+            Dictionary<String, String> param = new Dictionary<string, string>();
+            param.Add("@MucDichVayVon",yc.YCVV_mucdich);
+            param.Add("@ThoiHanVay", yc.YCVV_thoiHanVay.ToString());
+            param.Add("@SoTien", yc.YCVV_soTienVay.ToString());
+            param.Add("@KiHan", yc.YCVV_kiHan.ToString());
+            param.Add("@Ngay", yc.YCVV_ngayBatDauVay);
+            param.Add("@LaiSuat", yc.YCVV_laisuat.ToString());
+            param.Add("@TrangThai", yc.YCVV_trangThai.ToString());
+            param.Add("@MaYC", yc.YCVV_maYeuCau.ToString());
+
+            int result = HandleDB.Instance.ExecuteNonQuery(UpdateQuery, param);
+            if (result > 0)
+            {
+                MessageBox.Show("Sửa yêu cầu thành công");
+            }
+            }
+            catch(Exception err)
+            {
+                return false;
+            }
+            return true;
+        }
     }
 }
