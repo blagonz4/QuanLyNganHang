@@ -129,6 +129,12 @@
     <Compile Include="GUI_QLNN\GUI_NhanVienTinDung\frm_NhanVienTinDung.Designer.cs">
       <DependentUpon>frm_NhanVienTinDung.cs</DependentUpon>
     </Compile>
+    <Compile Include="GUI_QLNN\User Control\frm_ChiTietVayVon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GUI_QLNN\User Control\frm_ChiTietVayVon.Designer.cs">
+      <DependentUpon>frm_ChiTietVayVon.cs</DependentUpon>
+    </Compile>
     <Compile Include="GUI_QLNN\User Control\frm_SuaHopDong.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -146,6 +152,12 @@
     </Compile>
     <Compile Include="GUI_QLNN\User Control\us_DanhSachYeuCauVayVon.Designer.cs">
       <DependentUpon>us_DanhSachYeuCauVayVon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GUI_QLNN\User Control\us_DuyetYeuCauVayVon.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GUI_QLNN\User Control\us_DuyetYeuCauVayVon.Designer.cs">
+      <DependentUpon>us_DuyetYeuCauVayVon.cs</DependentUpon>
     </Compile>
     <Compile Include="GUI_QLNN\User Control\us_TaoYeuCauVayVon.cs">
       <SubType>UserControl</SubType>
@@ -200,6 +212,9 @@
     <EmbeddedResource Include="GUI_QLNN\GUI_QuanLyHopDong\frm_QuanLyHopDong.resx">
       <DependentUpon>frm_QuanLyHopDong.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GUI_QLNN\User Control\frm_ChiTietVayVon.resx">
+      <DependentUpon>frm_ChiTietVayVon.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GUI_QLNN\User Control\frm_SuaHopDong.resx">
       <DependentUpon>frm_SuaHopDong.cs</DependentUpon>
     </EmbeddedResource>
@@ -217,6 +232,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GUI_QLNN\User Control\us_DanhSachYeuCauVayVon.resx">
       <DependentUpon>us_DanhSachYeuCauVayVon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GUI_QLNN\User Control\us_DuyetYeuCauVayVon.resx">
+      <DependentUpon>us_DuyetYeuCauVayVon.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GUI_QLNN\User Control\us_TaoYeuCauVayVon.resx">
       <DependentUpon>us_TaoYeuCauVayVon.cs</DependentUpon>
