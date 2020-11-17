@@ -86,7 +86,16 @@ namespace QuanLyNganHang.GUI_QLNN.User_Control
             //        MessageBox.Show("Thử lại");
             //    }
             //}
-            Test();
+            if (InHopDong())
+            {
+
+                int idHopDong = BUS_HopDong.Instance.getNextID();
+                int mayc_temp; Int32.TryParse(mayc, out mayc_temp);
+                //MessageBox.Show(idHopDong+ " " +mayc_temp);
+                DTO_HopDong hd = new DTO_HopDong(idHopDong,mayc_temp);
+                //MessageBox.Show(hd.HopDong_maHopDong + " " + hd.HopDong_maYeuCauVayVon);
+                BUS_HopDong.themHopDong(idHopDong,mayc_temp);
+            }
         }
         private bool PrintHopDong()
         {
@@ -128,34 +137,54 @@ namespace QuanLyNganHang.GUI_QLNN.User_Control
                 
             }
         }
-        public void Test()
+        public Boolean InHopDong()
         {
-            string filePath = @"E:\Nam3\Phát triển bảo trì phần mềm\QuanLyNganHang\HopDong\HopDongMau.pdf";
-            string fileResult = @"HopDong.pdf";
-            DocumentCore dc = DocumentCore.Load(filePath);
-            string searchText = "<>";
-            foreach (ContentRange cr in dc.Content.Find(searchText).Reverse())
+            try
             {
-                cr.Replace(name);
-                searchText = name;
-                cr.Replace(diachi);
-                searchText = diachi;
-                cr.Replace(phone);
-                searchText = phone;
+                string filePath = @"E:\Nam3\Phát triển bảo trì phần mềm\QuanLyNganHang\HopDong\HopDongMau.pdf";
+                string fileResult = @"HopDong.pdf";
+                DocumentCore dc = DocumentCore.Load(filePath);
+
+                // Find a position to insert text. Before this text: "> in this position".
+                ContentRange cr = dc.Content.Find("<hoten>").FirstOrDefault();
+                if (cr != null)
+                    cr.Replace(name);
+
+                cr = dc.Content.Find("<cmnd>").FirstOrDefault();
+                if (cr != null)
+                    cr.Replace(cmnd);
+
+                cr = dc.Content.Find("<diachi>").FirstOrDefault();
+                if (cr != null)
+                    cr.Replace(diachi);
+
+                cr = dc.Content.Find("<sdt>").FirstOrDefault();
+                if (cr != null)
+                    cr.Replace(phone);
+
+                cr = dc.Content.Find("<tien>").FirstOrDefault();
+                if (cr != null)
+                    cr.Replace(sotien);
+
+                cr = dc.Content.Find("<thoihan>").FirstOrDefault();
+                if (cr != null)
+                    cr.Replace(thoihan);
+
+                cr = dc.Content.Find("<lai>").FirstOrDefault();
+                if (cr != null)
+                    cr.Replace(laisuat);
+
+
+                dc.Save(fileResult);
+                //System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo(filePath) { UseShellExecute = true });
+
+                //System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo(fileResult) { UseShellExecute = true });
+                return true;
             }
-            // Find a position to insert text. Before this text: "> in this position".
-            //for (int i = 1; i <= dc.Content.Find(">").Count(); i++)
-            //{
-            //    ContentRange cr = dc.Content.Find(">");
-            //// Insert new text.
-            //    if (cr != null)
-            //        cr.Start.Insert(name.ToString());
-            //}
-
-
-            dc.Save(fileResult);
-            //System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo(filePath) { UseShellExecute = true });
-            System.Diagnostics.Process.Start(new System.Diagnostics.ProcessStartInfo(fileResult) { UseShellExecute = true });
+            catch (Exception)
+            {
+                return false;
+            }
         }
         private void HopDong_PrintPage(object sender, PrintPageEventArgs e)
         {

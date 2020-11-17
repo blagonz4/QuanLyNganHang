@@ -48,11 +48,18 @@ namespace QuanLyNganHang.DAL_QLNN
         }
         public DataTable getDanhSach()
         {
-            DataTable dt = new DataTable();
-               
-            string LoadQuery = "SELECT * FROM YeuCauVayVon";
-            dt = HandleDB.Instance.ExecuteQuery(LoadQuery, null);
-            return dt;
+            try
+            {
+                DataTable dt = new DataTable();
+
+                string LoadQuery = "SELECT * FROM YeuCauVayVon";
+                dt = HandleDB.Instance.ExecuteQuery(LoadQuery, null);
+                return dt;
+            }
+            catch (Exception){
+                return null;
+            }
+            
         }
         public Boolean suaYeuCau(DTO_YeuCauVayVon yc)
         {

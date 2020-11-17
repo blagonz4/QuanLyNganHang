@@ -136,6 +136,7 @@
             this.Name = "frm_NhanVienTinDung";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Nhân viên tín dụng";
+            this.Load += new System.EventHandler(this.frm_NhanVienTinDung_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).EndInit();
             this.ResumeLayout(false);
