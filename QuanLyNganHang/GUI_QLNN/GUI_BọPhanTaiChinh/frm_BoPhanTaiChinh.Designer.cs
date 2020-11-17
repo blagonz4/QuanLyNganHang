@@ -119,6 +119,7 @@
             this.Name = "frm_BoPhanTaiChinh";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Bộ phận tài chính";
+            this.Load += new System.EventHandler(this.frm_BoPhanTaiChinh_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pnLogo)).EndInit();
             this.ResumeLayout(false);

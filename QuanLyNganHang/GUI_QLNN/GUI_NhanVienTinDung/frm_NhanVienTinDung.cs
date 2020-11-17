@@ -64,5 +64,16 @@ namespace QuanLyNganHang.GUI_QLNN
                 us_BaoCaoGiamSat.Instance.BringToFront();
         }
 
+        private void frm_NhanVienTinDung_Load(object sender, EventArgs e)
+        {
+            if (!pnlMainNVTD.Controls.Contains(us_TaoYeuCauVayVon.Instance))
+            {
+                pnlMainNVTD.Controls.Add(us_TaoYeuCauVayVon.Instance);
+                us_TaoYeuCauVayVon.Instance.Dock = DockStyle.Fill;
+                us_TaoYeuCauVayVon.Instance.BringToFront();
+            }
+            else
+                us_TaoYeuCauVayVon.Instance.BringToFront();
+        }
     }
 }

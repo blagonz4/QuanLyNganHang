@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using QuanLyNganHang.DTO_QLNN;
 using QuanLyNganHang.DAL_QLNN;
+using System.Data;
 
 namespace QuanLyNganHang.BUS_QLNN
 {
@@ -23,6 +24,17 @@ namespace QuanLyNganHang.BUS_QLNN
         public void themKhachHang(DTO_KhachHang kh)
         {
             DAL_KhachHang.Instance.themKhachHang(kh);
+        }
+        public DataTable getDanhSach()
+        {
+            try
+            {
+                return DAL_KhachHang.Instance.getDanhSach();
+            }
+            catch (Exception)
+            {
+                return null;
+            }
         }
     }
 }

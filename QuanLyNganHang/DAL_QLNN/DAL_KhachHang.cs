@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using QuanLyNganHang.DTO_QLNN;
 using QuanLyNganHang.BUS_QLNN;
 using System.Windows.Forms;
+using System.Data;
 
 namespace QuanLyNganHang.DAL_QLNN
 {
@@ -42,5 +43,27 @@ namespace QuanLyNganHang.DAL_QLNN
                 Console.WriteLine("Thêm khách hàng thành công");
             }
         }
+        public DataTable getDanhSach()
+        {
+            try
+            {
+                DataTable dt = new DataTable();
+
+                string LoadQuery = "select KhachHang.cmnd,name,phone,maHopDong,ngayBatDauVay,kiHan,soTienVay,laiSuat"+
+                                    "from KhachHang,YeuCauVayVon,HopDong"+
+                                    "where KhachHang.cmnd = YeuCauVayVon.cmnd and" +
+                                           " YeuCauVayVon.maYeuCauVayVon = HopDong.maYeuCauVayVon;" ;
+                dt = HandleDB.Instance.ExecuteQuery(LoadQuery, null);
+                return dt;
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+        }
+
+
+
+
     }
 }

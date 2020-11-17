@@ -28,32 +28,48 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.label1 = new System.Windows.Forms.Label();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.dgvDskh = new System.Windows.Forms.DataGridView();
+            this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDskh)).BeginInit();
             this.SuspendLayout();
             // 
-            // label1
+            // groupBox1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(447, 160);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(95, 17);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Danh sách kh";
+            this.groupBox1.Controls.Add(this.dgvDskh);
+            this.groupBox1.Location = new System.Drawing.Point(3, 3);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(992, 641);
+            this.groupBox1.TabIndex = 0;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Danh sách khách hàng";
+            // 
+            // dgvDskh
+            // 
+            this.dgvDskh.BackgroundColor = System.Drawing.Color.White;
+            this.dgvDskh.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDskh.Location = new System.Drawing.Point(0, 21);
+            this.dgvDskh.Name = "dgvDskh";
+            this.dgvDskh.RowTemplate.Height = 24;
+            this.dgvDskh.Size = new System.Drawing.Size(992, 563);
+            this.dgvDskh.TabIndex = 0;
             // 
             // us_DanhSachKhachHang
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.groupBox1);
             this.Name = "us_DanhSachKhachHang";
             this.Size = new System.Drawing.Size(998, 647);
+            this.groupBox1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDskh)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Label label1;
+        public System.Windows.Forms.GroupBox groupBox1;
+        public System.Windows.Forms.DataGridView dgvDskh;
     }
 }

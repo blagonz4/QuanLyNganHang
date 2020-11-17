@@ -17,13 +17,15 @@ namespace QuanLyNganHang.DAL_QLNN
         private static readonly Lazy<HandleDB> instance = new Lazy<HandleDB>(() => new HandleDB());
         private string connectionSTR = @"Data Source=.\SQLEXPRESS;Initial Catalog=QUANLYNGANHANG;Integrated Security=True";
 
+        private static HandleDB _instance;
         public static HandleDB Instance
         {
             get
             {
-                return instance.Value;
+                if (_instance == null)
+                    _instance = new HandleDB();
+                return _instance;
             }
-
         }
 
 
