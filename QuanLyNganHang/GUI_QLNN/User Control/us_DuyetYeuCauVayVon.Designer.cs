@@ -49,7 +49,7 @@ namespace QuanLyNganHang.GUI_QLNN.User_Control
             this.groupBox1.Location = new System.Drawing.Point(3, 4);
             this.groupBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(1409, 798);
+            this.groupBox1.Size = new System.Drawing.Size(1415, 806);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "DANH SÁCH YÊU CẦU VAY VỐN";
@@ -65,7 +65,7 @@ namespace QuanLyNganHang.GUI_QLNN.User_Control
             this.btnXem.TabIndex = 35;
             this.btnXem.Text = "Xem chi tiết";
             this.btnXem.UseVisualStyleBackColor = false;
-            this.btnXem.Click += new System.EventHandler(this.btnSua_Click);
+            this.btnXem.Click += new System.EventHandler(this.btnXem_click);
             // 
             // btnFind
             // 
@@ -98,11 +98,14 @@ namespace QuanLyNganHang.GUI_QLNN.User_Control
             this.dgvDanhSachYCVV.RowTemplate.Height = 24;
             this.dgvDanhSachYCVV.Size = new System.Drawing.Size(1396, 663);
             this.dgvDanhSachYCVV.TabIndex = 1;
+            this.dgvDanhSachYCVV.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDanhSachYCVV_CellClick);
+            this.dgvDanhSachYCVV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDanhSachYCVV_CellContentClick);
             // 
             // us_DuyetYeuCauVayVon
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.Controls.Add(this.groupBox1);
             this.Name = "us_DuyetYeuCauVayVon";
             this.Size = new System.Drawing.Size(1415, 806);

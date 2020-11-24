@@ -8,7 +8,7 @@ using System.Windows.Forms;
 
 namespace QuanLyNganHang.DAL_QLNN
 {
-    public  class DAL_HopDong
+    public class DAL_HopDong
     {
         private static DAL_HopDong _instance;
         public static DAL_HopDong Instance

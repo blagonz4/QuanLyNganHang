@@ -78,6 +78,7 @@
             this.btnFind.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnFind.TabIndex = 3;
             this.btnFind.TabStop = false;
+            this.btnFind.Click += new System.EventHandler(this.btnFind_Click);
             // 
             // tbCmnd
             // 
@@ -113,6 +114,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "us_BaoCaoGiamSat";
             this.Size = new System.Drawing.Size(1123, 792);
+            this.Load += new System.EventHandler(this.us_BaoCaoGiamSat_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnFind)).EndInit();

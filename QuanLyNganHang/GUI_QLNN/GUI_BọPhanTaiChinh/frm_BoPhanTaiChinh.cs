@@ -32,7 +32,7 @@ namespace QuanLyNganHang.GUI_QLNN
 
         private void btnDanhsachkhachhang_Click(object sender, EventArgs e)
         {
-            us_DanhSachKhachHang.Instance.dgvDskh.DataSource = BUS_KhachHang.Instance.getDanhSach();
+            us_DanhSachKhachHang.Instance.dgvDanhSachKH.DataSource = BUS_KhachHang.Instance.getDanhSach();
 
             if (!pnlMainBPTC.Controls.Contains(us_DanhSachKhachHang.Instance))
             {
@@ -46,7 +46,7 @@ namespace QuanLyNganHang.GUI_QLNN
 
         private void frm_BoPhanTaiChinh_Load(object sender, EventArgs e)
         {
-            us_DanhSachKhachHang.Instance.dgvDskh.DataSource = BUS_KhachHang.Instance.getDanhSach();
+            us_DanhSachKhachHang.Instance.dgvDanhSachKH.DataSource = BUS_KhachHang.Instance.getDanhSach();
 
             if (!pnlMainBPTC.Controls.Contains(us_DanhSachKhachHang.Instance))
             {

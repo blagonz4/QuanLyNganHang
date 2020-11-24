@@ -19,8 +19,8 @@ namespace QuanLyNganHang
             Application.SetCompatibleTextRenderingDefault(false);
             //Application.Run(new frm_DangNhap());
             //Application.Run(new frm_BoPhanTaiChinh());
-            //Application.Run(new frm_BoPhanXetDuyet());
-            Application.Run(new frm_NhanVienTinDung());
+            Application.Run(new frm_BoPhanXetDuyet());
+            //Application.Run(new frm_NhanVienTinDung());
             //Application.Run(new frm_QuanLyHopDong());
         }
     }

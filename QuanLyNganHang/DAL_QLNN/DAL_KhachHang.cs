@@ -61,7 +61,29 @@ namespace QuanLyNganHang.DAL_QLNN
                 return null;
             }
         }
+        public DTO_KhachHang findOne(int cmnd)
+        {
+            try
+            {
+            DataTable dt = new DataTable();
 
+            Dictionary<string, string> param = new Dictionary<string, string>();
+
+            string FindQuery = "select cmnd,name,diachi,phone from KhachHang where cmnd = @cmnd";
+            param.Add("@cmnd", cmnd.ToString());
+
+            dt = HandleDB.Instance.ExecuteQuery(FindQuery, param);
+
+            DataRow firstrow = dt.Rows.Cast<DataRow>().FirstOrDefault();
+            DTO_KhachHang result = new DTO_KhachHang(Convert.ToInt32(firstrow["cmnd"]), firstrow["name"].ToString(), firstrow["diachi"].ToString(), Convert.ToInt32(firstrow["phone"]));
+            
+            return result;
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+        }
 
 
 

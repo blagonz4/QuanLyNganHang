@@ -35,10 +35,13 @@
             // 
             // pnlMainBPXD
             // 
+            this.pnlMainBPXD.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.pnlMainBPXD.BackColor = System.Drawing.Color.White;
-            this.pnlMainBPXD.Location = new System.Drawing.Point(12, 96);
+            this.pnlMainBPXD.Location = new System.Drawing.Point(14, 120);
+            this.pnlMainBPXD.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.pnlMainBPXD.MaximumSize = new System.Drawing.Size(1415, 806);
             this.pnlMainBPXD.Name = "pnlMainBPXD";
-            this.pnlMainBPXD.Size = new System.Drawing.Size(1258, 645);
+            this.pnlMainBPXD.Size = new System.Drawing.Size(1415, 806);
             this.pnlMainBPXD.TabIndex = 33;
             // 
             // pbLogo
@@ -48,23 +51,26 @@
             this.pbLogo.Dock = System.Windows.Forms.DockStyle.Top;
             this.pbLogo.Image = global::QuanLyNganHang.Properties.Resources.logo;
             this.pbLogo.Location = new System.Drawing.Point(0, 0);
+            this.pbLogo.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.pbLogo.Name = "pbLogo";
-            this.pbLogo.Size = new System.Drawing.Size(1282, 86);
+            this.pbLogo.Size = new System.Drawing.Size(1442, 108);
             this.pbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbLogo.TabIndex = 32;
             this.pbLogo.TabStop = false;
             // 
             // frm_BoPhanXetDuyet
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkRed;
-            this.ClientSize = new System.Drawing.Size(1282, 753);
+            this.ClientSize = new System.Drawing.Size(1442, 941);
             this.Controls.Add(this.pbLogo);
             this.Controls.Add(this.pnlMainBPXD);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frm_BoPhanXetDuyet";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Bộ phận xét duyệt";
+            this.Load += new System.EventHandler(this.frm_BoPhanXetDuyet_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pbLogo)).EndInit();
             this.ResumeLayout(false);
 

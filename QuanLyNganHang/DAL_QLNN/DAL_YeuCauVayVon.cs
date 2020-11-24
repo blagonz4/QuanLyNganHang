@@ -115,7 +115,36 @@ namespace QuanLyNganHang.DAL_QLNN
             {
                 return null;
             }
-           
+    
+        }
+        public DTO_YeuCauVayVon fineOne(int maYeuCau)
+        {
+            try
+            {
+                DataTable dt = new DataTable();
+                string LoadQuery = "select KhachHang.cmnd,KhachHang.name,diachi,phone,maYeuCauVayVon,soTienVay,ngayBatDauVay,thoiHanVay,laiSuat,mucDichVayVon " +
+                                    "from YeuCauVayVon, KhachHang " +
+                                    "where YeuCauVayVon.maYeuCauVayVon = '" + maYeuCau.ToString();
+                dt = HandleDB.Instance.ExecuteQuery(LoadQuery, null);
+                IEnumerable<DataRow> rows = dt.Rows.Cast<DataRow>();
+                DataRow row = rows.First();
+                DTO_YeuCauVayVon res = new DTO_YeuCauVayVon(
+                    Convert.ToInt32(row["maYeuCauVayVon"]),
+                    row["cmnd"].ToString(),
+                    row["mucDichVayVon"].ToString(),
+                    Convert.ToInt32(row["thoiHanVay"]),
+                    Convert.ToInt32(row["soTienVay"]),
+                    Convert.ToInt32(row["thoiHanVay"]),
+                    row["ngayBatDauVay"].ToString(),
+                    float.Parse(row["laiSuat"].ToString()),
+                    0);
+                return res;
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+
         }
     }
 }

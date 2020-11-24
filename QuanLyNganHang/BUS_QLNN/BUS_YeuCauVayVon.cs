@@ -37,6 +37,10 @@ namespace QuanLyNganHang.BUS_QLNN
         public DataTable findOne(string cmnd)
         {
             return DAL_YeuCauVayVon.Instance.fineOne(cmnd);
-        } 
+        }
+        public DTO_YeuCauVayVon findOne(int maYeuCau)
+        {
+            return DAL_YeuCauVayVon.Instance.fineOne(maYeuCau);
+        }
     }
 }

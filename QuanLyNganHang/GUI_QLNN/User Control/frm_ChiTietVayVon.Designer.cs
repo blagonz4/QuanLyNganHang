@@ -30,16 +30,17 @@ namespace QuanLyNganHang.GUI_QLNN.User_Control
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.lblTenKhachHang = new System.Windows.Forms.Label();
-            this.lblCMND = new System.Windows.Forms.Label();
-            this.lblDiaChi = new System.Windows.Forms.Label();
             this.lblSoDienThoai = new System.Windows.Forms.Label();
+            this.lblDiaChi = new System.Windows.Forms.Label();
+            this.lblCMND = new System.Windows.Forms.Label();
+            this.lblTenKhachHang = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.lblLaiSuat = new System.Windows.Forms.Label();
+            this.lblNgayBatDau = new System.Windows.Forms.Label();
             this.lblSoTienVay = new System.Windows.Forms.Label();
             this.lblThoiHanVay = new System.Windows.Forms.Label();
             this.lblKiHan = new System.Windows.Forms.Label();
             this.lblMucDichVay = new System.Windows.Forms.Label();
-            this.lblNgayBatDau = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.dgvDanhSachHoSoVay = new System.Windows.Forms.DataGridView();
             this.btnHuy = new System.Windows.Forms.Button();
@@ -64,23 +65,14 @@ namespace QuanLyNganHang.GUI_QLNN.User_Control
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Thông tin khách hàng";
             // 
-            // lblTenKhachHang
+            // lblSoDienThoai
             // 
-            this.lblTenKhachHang.AutoSize = true;
-            this.lblTenKhachHang.Location = new System.Drawing.Point(7, 26);
-            this.lblTenKhachHang.Name = "lblTenKhachHang";
-            this.lblTenKhachHang.Size = new System.Drawing.Size(131, 20);
-            this.lblTenKhachHang.TabIndex = 0;
-            this.lblTenKhachHang.Text = "Tên khách hàng: ";
-            // 
-            // lblCMND
-            // 
-            this.lblCMND.AutoSize = true;
-            this.lblCMND.Location = new System.Drawing.Point(397, 26);
-            this.lblCMND.Name = "lblCMND";
-            this.lblCMND.Size = new System.Drawing.Size(68, 20);
-            this.lblCMND.TabIndex = 1;
-            this.lblCMND.Text = "CMND:  ";
+            this.lblSoDienThoai.AutoSize = true;
+            this.lblSoDienThoai.Location = new System.Drawing.Point(7, 86);
+            this.lblSoDienThoai.Name = "lblSoDienThoai";
+            this.lblSoDienThoai.Size = new System.Drawing.Size(110, 20);
+            this.lblSoDienThoai.TabIndex = 3;
+            this.lblSoDienThoai.Text = "Số điện thoại: ";
             // 
             // lblDiaChi
             // 
@@ -91,17 +83,27 @@ namespace QuanLyNganHang.GUI_QLNN.User_Control
             this.lblDiaChi.TabIndex = 2;
             this.lblDiaChi.Text = "Địa chỉ: ";
             // 
-            // lblSoDienThoai
+            // lblCMND
             // 
-            this.lblSoDienThoai.AutoSize = true;
-            this.lblSoDienThoai.Location = new System.Drawing.Point(7, 86);
-            this.lblSoDienThoai.Name = "lblSoDienThoai";
-            this.lblSoDienThoai.Size = new System.Drawing.Size(110, 20);
-            this.lblSoDienThoai.TabIndex = 3;
-            this.lblSoDienThoai.Text = "Số điện thoại: ";
+            this.lblCMND.AutoSize = true;
+            this.lblCMND.Location = new System.Drawing.Point(397, 26);
+            this.lblCMND.Name = "lblCMND";
+            this.lblCMND.Size = new System.Drawing.Size(68, 20);
+            this.lblCMND.TabIndex = 1;
+            this.lblCMND.Text = "CMND:  ";
+            // 
+            // lblTenKhachHang
+            // 
+            this.lblTenKhachHang.AutoSize = true;
+            this.lblTenKhachHang.Location = new System.Drawing.Point(7, 26);
+            this.lblTenKhachHang.Name = "lblTenKhachHang";
+            this.lblTenKhachHang.Size = new System.Drawing.Size(131, 20);
+            this.lblTenKhachHang.TabIndex = 0;
+            this.lblTenKhachHang.Text = "Tên khách hàng: ";
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.lblLaiSuat);
             this.groupBox2.Controls.Add(this.lblNgayBatDau);
             this.groupBox2.Controls.Add(this.lblSoTienVay);
             this.groupBox2.Controls.Add(this.lblThoiHanVay);
@@ -113,6 +115,24 @@ namespace QuanLyNganHang.GUI_QLNN.User_Control
             this.groupBox2.TabIndex = 4;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông tin vay vốn ";
+            // 
+            // lblLaiSuat
+            // 
+            this.lblLaiSuat.AutoSize = true;
+            this.lblLaiSuat.Location = new System.Drawing.Point(710, 56);
+            this.lblLaiSuat.Name = "lblLaiSuat";
+            this.lblLaiSuat.Size = new System.Drawing.Size(77, 20);
+            this.lblLaiSuat.TabIndex = 5;
+            this.lblLaiSuat.Text = "Lãi suất:  ";
+            // 
+            // lblNgayBatDau
+            // 
+            this.lblNgayBatDau.AutoSize = true;
+            this.lblNgayBatDau.Location = new System.Drawing.Point(397, 56);
+            this.lblNgayBatDau.Name = "lblNgayBatDau";
+            this.lblNgayBatDau.Size = new System.Drawing.Size(138, 20);
+            this.lblNgayBatDau.TabIndex = 4;
+            this.lblNgayBatDau.Text = "Ngày bắt đầu vay: ";
             // 
             // lblSoTienVay
             // 
@@ -150,15 +170,6 @@ namespace QuanLyNganHang.GUI_QLNN.User_Control
             this.lblMucDichVay.TabIndex = 0;
             this.lblMucDichVay.Text = "Mục đích vay vốn: ";
             // 
-            // lblNgayBatDau
-            // 
-            this.lblNgayBatDau.AutoSize = true;
-            this.lblNgayBatDau.Location = new System.Drawing.Point(397, 56);
-            this.lblNgayBatDau.Name = "lblNgayBatDau";
-            this.lblNgayBatDau.Size = new System.Drawing.Size(138, 20);
-            this.lblNgayBatDau.TabIndex = 4;
-            this.lblNgayBatDau.Text = "Ngày bắt đầu vay: ";
-            // 
             // groupBox3
             // 
             this.groupBox3.Controls.Add(this.dgvDanhSachHoSoVay);
@@ -195,6 +206,7 @@ namespace QuanLyNganHang.GUI_QLNN.User_Control
             this.btnHuy.TabIndex = 38;
             this.btnHuy.Text = "Huỷ bỏ";
             this.btnHuy.UseVisualStyleBackColor = false;
+            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
             // btnKhongDuyet
             // 
@@ -207,6 +219,7 @@ namespace QuanLyNganHang.GUI_QLNN.User_Control
             this.btnKhongDuyet.TabIndex = 37;
             this.btnKhongDuyet.Text = "Không duyệt";
             this.btnKhongDuyet.UseVisualStyleBackColor = false;
+            this.btnKhongDuyet.Click += new System.EventHandler(this.btnKhongDuyet_Click);
             // 
             // btnDuyet
             // 
@@ -219,6 +232,7 @@ namespace QuanLyNganHang.GUI_QLNN.User_Control
             this.btnDuyet.TabIndex = 39;
             this.btnDuyet.Text = "Duyệt";
             this.btnDuyet.UseVisualStyleBackColor = false;
+            this.btnDuyet.Click += new System.EventHandler(this.btnDuyet_Click);
             // 
             // frm_ChiTietVayVon
             // 
@@ -233,6 +247,7 @@ namespace QuanLyNganHang.GUI_QLNN.User_Control
             this.Controls.Add(this.groupBox1);
             this.Name = "frm_ChiTietVayVon";
             this.Text = "frm_ChiTietVayVon";
+            this.Load += new System.EventHandler(this.frm_ChiTietVayVon_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -246,20 +261,21 @@ namespace QuanLyNganHang.GUI_QLNN.User_Control
         #endregion
 
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Label lblDiaChi;
-        private System.Windows.Forms.Label lblCMND;
-        private System.Windows.Forms.Label lblTenKhachHang;
-        private System.Windows.Forms.Label lblSoDienThoai;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.Label lblNgayBatDau;
-        private System.Windows.Forms.Label lblSoTienVay;
-        private System.Windows.Forms.Label lblThoiHanVay;
-        private System.Windows.Forms.Label lblKiHan;
-        private System.Windows.Forms.Label lblMucDichVay;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.DataGridView dgvDanhSachHoSoVay;
         public System.Windows.Forms.Button btnHuy;
         public System.Windows.Forms.Button btnKhongDuyet;
         public System.Windows.Forms.Button btnDuyet;
+        public System.Windows.Forms.Label lblDiaChi;
+        public System.Windows.Forms.Label lblTenKhachHang;
+        public System.Windows.Forms.Label lblSoDienThoai;
+        public System.Windows.Forms.Label lblNgayBatDau;
+        public System.Windows.Forms.Label lblSoTienVay;
+        public System.Windows.Forms.Label lblThoiHanVay;
+        public System.Windows.Forms.Label lblKiHan;
+        public System.Windows.Forms.Label lblMucDichVay;
+        public System.Windows.Forms.Label lblLaiSuat;
+        public System.Windows.Forms.Label lblCMND;
+        public System.Windows.Forms.DataGridView dgvDanhSachHoSoVay;
     }
 }

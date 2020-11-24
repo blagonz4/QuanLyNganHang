@@ -12,7 +12,6 @@ namespace QuanLyNganHang.GUI_QLNN.User_Control
 {
     public partial class us_DanhSachKhachHang : UserControl
     {
-        int 
         private static us_DanhSachKhachHang _instance;
         public static us_DanhSachKhachHang Instance
         {

@@ -36,5 +36,16 @@ namespace QuanLyNganHang.BUS_QLNN
                 return null;
             }
         }
+        public DTO_KhachHang findOne(int cmnd)
+        {
+            try
+            {
+                return DAL_KhachHang.Instance.findOne(cmnd);
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+        }
     }
 }

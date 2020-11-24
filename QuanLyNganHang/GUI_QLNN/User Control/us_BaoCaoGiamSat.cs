@@ -7,12 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using QuanLyNganHang.BUS_QLNN;
 
 namespace QuanLyNganHang.GUI_QLNN.User_Control
 {
     public partial class us_BaoCaoGiamSat : UserControl
     {
-        string linkfileBaoCao;
+        dynamic linkfileBaoCao;
         private static us_BaoCaoGiamSat _instance;
         public static us_BaoCaoGiamSat Instance
         {
@@ -42,7 +43,7 @@ namespace QuanLyNganHang.GUI_QLNN.User_Control
         {
             int index = e.RowIndex;
             if(index > 0)
-                linkfileBaoCao = dgvDanhSachBCGS.Rows[e].Cells["linkFileBaoCao"];
+                linkfileBaoCao = dgvDanhSachBCGS.Rows[index].Cells["linkFileBaoCao"];
         }
 
         private void btnXem_MouseHover(object sender, EventArgs e)
@@ -59,6 +60,19 @@ namespace QuanLyNganHang.GUI_QLNN.User_Control
         {
             tbCmnd.Clear();
             tbCmnd.ForeColor = System.Drawing.Color.Black;
+        }
+
+        private void us_BaoCaoGiamSat_Load(object sender, EventArgs e)
+        {
+            dgvDanhSachBCGS.DataSource = BUS_BaoCaoGiamSat.Instance.getDanhSach();
+        }
+
+        private void btnFind_Click(object sender, EventArgs e)
+        {
+            if(tbCmnd.Text != "")
+                dgvDanhSachBCGS.DataSource = BUS_BaoCaoGiamSat.Instance.getDanhSach(int.Parse(tbCmnd.Text));
+            else
+                dgvDanhSachBCGS.DataSource = BUS_BaoCaoGiamSat.Instance.getDanhSach();
         }
     }
 }
