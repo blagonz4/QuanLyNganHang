@@ -65,6 +65,8 @@
             this.btnXuatThuThongBao.Text = "Xuất thư thông báo";
             this.btnXuatThuThongBao.UseVisualStyleBackColor = false;
             this.btnXuatThuThongBao.Click += new System.EventHandler(this.btnXuatThuThongBao_Click);
+            this.btnXuatThuThongBao.MouseLeave += new System.EventHandler(this.btnXuatThuThongBao_MouseLeave);
+            this.btnXuatThuThongBao.MouseHover += new System.EventHandler(this.btnXuatThuThongBao_MouseHover);
             // 
             // btnFind
             // 
@@ -76,6 +78,7 @@
             this.btnFind.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.btnFind.TabIndex = 3;
             this.btnFind.TabStop = false;
+            this.btnFind.Click += new System.EventHandler(this.btnFind_Click);
             // 
             // tbCmnd
             // 
@@ -86,17 +89,22 @@
             this.tbCmnd.Size = new System.Drawing.Size(149, 26);
             this.tbCmnd.TabIndex = 2;
             this.tbCmnd.Text = "Nhập CMND";
+            this.tbCmnd.Click += new System.EventHandler(this.tbCmnd_Click);
             // 
             // dgvDanhSachKH
             // 
             this.dgvDanhSachKH.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvDanhSachKH.Location = new System.Drawing.Point(7, 74);
             this.dgvDanhSachKH.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.dgvDanhSachKH.MultiSelect = false;
             this.dgvDanhSachKH.Name = "dgvDanhSachKH";
+            this.dgvDanhSachKH.ReadOnly = true;
             this.dgvDanhSachKH.RowHeadersWidth = 62;
             this.dgvDanhSachKH.RowTemplate.Height = 24;
+            this.dgvDanhSachKH.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvDanhSachKH.Size = new System.Drawing.Size(1106, 649);
             this.dgvDanhSachKH.TabIndex = 1;
+            this.dgvDanhSachKH.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDanhSachKH_CellClick);
             // 
             // us_DanhSachKhachHang
             // 
@@ -106,6 +114,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "us_DanhSachKhachHang";
             this.Size = new System.Drawing.Size(1123, 788);
+            this.Load += new System.EventHandler(this.us_DanhSachKhachHang_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnFind)).EndInit();

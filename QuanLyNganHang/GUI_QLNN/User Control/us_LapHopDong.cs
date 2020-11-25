@@ -141,7 +141,7 @@ namespace QuanLyNganHang.GUI_QLNN.User_Control
         {
             try
             {
-                string filePath = @"E:\Nam3\Phát triển bảo trì phần mềm\QuanLyNganHang\HopDong\HopDongMau.pdf";
+                string filePath = Application.StartupPath + @"\Mau\HopDong\HopDongMau.pdf";
                 string fileResult = @"HopDong.pdf";
                 DocumentCore dc = DocumentCore.Load(filePath);
 

@@ -162,6 +162,7 @@ namespace QuanLyNganHang.GUI_QLNN.User_Control
             this.Controls.Add(this.groupBox1);
             this.Name = "frm_SuaHopDong";
             this.Text = "frm_SuaHopDong";
+            this.Load += new System.EventHandler(this.frm_SuaHopDong_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);

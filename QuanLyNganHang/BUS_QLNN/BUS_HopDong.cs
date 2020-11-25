@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using QuanLyNganHang.DAL_QLNN;
+using QuanLyNganHang.DTO_QLNN;
 
 namespace QuanLyNganHang.BUS_QLNN
 {
@@ -26,6 +27,10 @@ namespace QuanLyNganHang.BUS_QLNN
         public int getNextID()
         {
             return DAL_HopDong.Instance.getNextID();
+        }
+        public Boolean suaHopDong(DTO_HopDong hd)
+        {
+            return DAL_HopDong.Instance.suaHopDong(hd);
         }
     }
     

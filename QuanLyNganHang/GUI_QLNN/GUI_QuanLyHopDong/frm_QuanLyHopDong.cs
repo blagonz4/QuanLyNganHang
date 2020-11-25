@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using QuanLyNganHang.GUI_QLNN.User_Control;
 
 namespace QuanLyNganHang.GUI_QLNN
 {
@@ -17,9 +18,28 @@ namespace QuanLyNganHang.GUI_QLNN
             InitializeComponent();
         }
 
-        private void btnTaoyeucauvayvon_Click(object sender, EventArgs e)
+        private void btnBaocaogiamsat_Click(object sender, EventArgs e)
         {
+            if (!pnlMain.Controls.Contains(us_BaoCaoGiamSat.Instance))
+            {
+                pnlMain.Controls.Add(us_BaoCaoGiamSat.Instance);
+                us_BaoCaoGiamSat.Instance.Dock = DockStyle.Fill;
+                us_BaoCaoGiamSat.Instance.BringToFront();
+            }
+            else
+                us_BaoCaoGiamSat.Instance.BringToFront();
+        }
 
+        private void btnDanhsachkh_Click(object sender, EventArgs e)
+        {
+            if (!pnlMain.Controls.Contains(us_DanhSachKhachHang.Instance))
+            {
+                pnlMain.Controls.Add(us_DanhSachKhachHang.Instance);
+                us_DanhSachKhachHang.Instance.Dock = DockStyle.Fill;
+                us_DanhSachKhachHang.Instance.BringToFront();
+            }
+            else
+                us_DanhSachKhachHang.Instance.BringToFront();
         }
     }
 }
