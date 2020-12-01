@@ -113,6 +113,7 @@ namespace QuanLyNganHang.GUI_QLNN.User_Control
             this.dgvDanhSachDieuKhoan.RowTemplate.Height = 28;
             this.dgvDanhSachDieuKhoan.Size = new System.Drawing.Size(697, 226);
             this.dgvDanhSachDieuKhoan.TabIndex = 0;
+            this.dgvDanhSachDieuKhoan.CellEndEdit += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDanhSachDieuKhoan_CellEndEdit);
             // 
             // btnLuu
             // 
@@ -125,6 +126,7 @@ namespace QuanLyNganHang.GUI_QLNN.User_Control
             this.btnLuu.TabIndex = 35;
             this.btnLuu.Text = "Lưu";
             this.btnLuu.UseVisualStyleBackColor = false;
+            this.btnLuu.Click += new System.EventHandler(this.btnLuu_Click);
             // 
             // btnHuy
             // 
@@ -137,6 +139,7 @@ namespace QuanLyNganHang.GUI_QLNN.User_Control
             this.btnHuy.TabIndex = 36;
             this.btnHuy.Text = "Huỷ bỏ";
             this.btnHuy.UseVisualStyleBackColor = false;
+            this.btnHuy.Click += new System.EventHandler(this.btnHuy_Click);
             // 
             // btnThanhLy
             // 
@@ -149,6 +152,7 @@ namespace QuanLyNganHang.GUI_QLNN.User_Control
             this.btnThanhLy.TabIndex = 37;
             this.btnThanhLy.Text = "Thanh lý hợp đồng";
             this.btnThanhLy.UseVisualStyleBackColor = false;
+            this.btnThanhLy.Click += new System.EventHandler(this.btnThanhLy_Click);
             // 
             // frm_SuaHopDong
             // 

@@ -13,7 +13,7 @@ namespace QuanLyNganHang.GUI_QLNN.User_Control
     public partial class us_DanhSachYeuCauVayVon : UserControl
     {
         public static string MaYeuCau;
-        public  static string KiHan;
+        public static string KiHan;
         public static string LaiSuat;
         public static string MucDich;
         public static string NgayBatDau;

@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 using System.Windows.Forms;
+using QuanLyNganHang.DTO_QLNN;
 
 namespace QuanLyNganHang.DAL_QLNN
 {
@@ -38,6 +39,77 @@ namespace QuanLyNganHang.DAL_QLNN
 
             return nextID;
         }
+
+        public DataTable getDanhSach(int cmnd)
+        {
+            try
+            {
+                Dictionary<string, string> param = new Dictionary<string, string>();
+                DataTable dt = new DataTable();
+                string LoadQuery = "select KhachHang.cmnd,name,phone,maHopDong,ngayBatDauVay,kiHan,soTienVay,laiSuat" +
+                                    " from KhachHang,YeuCauVayVon,HopDong,trangThai" +
+                                    " where KhachHang.cmnd = YeuCauVayVon.cmnd and" +
+                                    " YeuCauVayVon.maYeuCauVayVon = HopDong.maYeuCauVayVon and" +
+                                    " KhachHang.cmnd = @cmnd";
+                param.Add("@cmnd", cmnd.ToString());
+                dt = HandleDB.Instance.ExecuteQuery(LoadQuery, param);
+                return dt;
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+        }
+
+        public bool thanhLyHopDong(int mahd)
+        {
+            try
+            {
+                Dictionary<string, string> param = new Dictionary<string, string>();
+
+                string UpdateQuery = String.Empty;
+                UpdateQuery += "UPDATE YeuCauVayVon ";
+                UpdateQuery += "SET trangThai = @trangThaiMoi ";
+                UpdateQuery += "WHERE maYeuCauVayVon = @maycvv ";
+
+                param.Add("@trangThaiMoi", "Đã thanh lý hợp đồng");
+                param.Add("@maycvv", mahd.ToString());
+
+
+                int result = HandleDB.Instance.ExecuteNonQuery(UpdateQuery, param);
+                if (result > 0)
+                {
+                    MessageBox.Show("Thanh lý thành công.");
+                    return true;
+                }
+                else return false;
+            }
+            catch (NullReferenceException)
+            {
+                return false;
+            }
+
+        }
+
+        public DataTable getDanhSach()
+        {
+            try
+            {
+                DataTable dt = new DataTable();
+
+                string LoadQuery = "select KhachHang.cmnd,name,phone,maHopDong,ngayBatDauVay,kiHan,soTienVay,laiSuat" +
+                                    "from KhachHang,YeuCauVayVon,HopDong,trangThai" +
+                                    "where KhachHang.cmnd = YeuCauVayVon.cmnd and" +
+                                           " YeuCauVayVon.maYeuCauVayVon = HopDong.maYeuCauVayVon;";
+                dt = HandleDB.Instance.ExecuteQuery(LoadQuery, null);
+                return dt;
+            }
+            catch (Exception)
+            {
+                return null;
+            }
+        }
+
         public static Boolean themHopDong(int idhd, int mayc)
         {
             try

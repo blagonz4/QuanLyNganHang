@@ -34,7 +34,9 @@ namespace QuanLyNganHang.BUS_QLNN
         }
         public Boolean suaDieuKhoan(DTO_DieuKhoan dk)
         {
-            return DAL_DieuKhoan.Instance.themDieuKhoan(dk);
+            bool themDK = DAL_DieuKhoan.Instance.themDieuKhoan(dk);
+            bool themDCHD = DAL_DieuChinhHopDong.Instance.themDieuChinhHopDong(dk);
+            return (themDK && themDCHD);
         }
     }
 }

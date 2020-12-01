@@ -57,10 +57,7 @@ namespace QuanLyNganHang.GUI_QLNN.User_Control
                 //Sửa lại mã trạng thái của yêu cầu
                 BUS_YeuCauVayVon.Instance.suaYeuCau(new DTO_YeuCauVayVon(int.Parse(MaYeuCau), cmnd, MucDich, int.Parse(ThoiHan), int.Parse(SoTien), int.Parse(KiHan), NgayBatDau, int.Parse(LaiSuat), 1));
             }
-            else
-            {
-                return;
-            }    
+            this.Close();
         }
 
         private void btnKhongDuyet_Click(object sender, EventArgs e)
@@ -70,10 +67,7 @@ namespace QuanLyNganHang.GUI_QLNN.User_Control
                 //Sửa lại mã trạng thái của yêu cầu
                 BUS_YeuCauVayVon.Instance.suaYeuCau(new DTO_YeuCauVayVon(int.Parse(MaYeuCau), cmnd, MucDich, int.Parse(ThoiHan), int.Parse(SoTien), int.Parse(KiHan), NgayBatDau, int.Parse(LaiSuat), 0));
             }
-            else
-            {
-                return;
-            }
+            this.Close();
         }
     }
 }

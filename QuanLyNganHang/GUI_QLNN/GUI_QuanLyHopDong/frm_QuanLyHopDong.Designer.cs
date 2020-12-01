@@ -64,6 +64,7 @@
             this.btnDanhsachhopdong.TabIndex = 30;
             this.btnDanhsachhopdong.Text = "Danh sách hợp đồng";
             this.btnDanhsachhopdong.UseVisualStyleBackColor = false;
+            this.btnDanhsachhopdong.Click += new System.EventHandler(this.btnDanhsachhopdong_Click);
             // 
             // btndanhsachycvv
             // 
@@ -77,6 +78,7 @@
             this.btndanhsachycvv.TabIndex = 30;
             this.btndanhsachycvv.Text = "Danh sách yêu cầu vay vốn";
             this.btndanhsachycvv.UseVisualStyleBackColor = false;
+            this.btndanhsachycvv.Click += new System.EventHandler(this.btndanhsachycvv_Click);
             // 
             // btnDanhsachkh
             // 

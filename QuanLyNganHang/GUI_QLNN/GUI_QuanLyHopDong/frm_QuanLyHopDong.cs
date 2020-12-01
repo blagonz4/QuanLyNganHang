@@ -41,5 +41,29 @@ namespace QuanLyNganHang.GUI_QLNN
             else
                 us_DanhSachKhachHang.Instance.BringToFront();
         }
+
+        private void btnDanhsachhopdong_Click(object sender, EventArgs e)
+        {
+            if (!pnlMain.Controls.Contains(us_DanhSachHopDong.Instance))
+            {
+                pnlMain.Controls.Add(us_DanhSachHopDong.Instance);
+                us_DanhSachHopDong.Instance.Dock = DockStyle.Fill;
+                us_DanhSachHopDong.Instance.BringToFront();
+            }
+            else
+                us_DanhSachHopDong.Instance.BringToFront();
+        }
+
+        private void btndanhsachycvv_Click(object sender, EventArgs e)
+        {
+            if (!pnlMain.Controls.Contains(us_DanhSachYeuCauVayVon.Instance))
+            {
+                pnlMain.Controls.Add(us_DanhSachYeuCauVayVon.Instance);
+                us_DanhSachYeuCauVayVon.Instance.Dock = DockStyle.Fill;
+                us_DanhSachYeuCauVayVon.Instance.BringToFront();
+            }
+            else
+                us_DanhSachYeuCauVayVon.Instance.BringToFront();
+        }
     }
 }

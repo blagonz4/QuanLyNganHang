@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using QuanLyNganHang.DAL_QLNN;
 using QuanLyNganHang.DTO_QLNN;
+using System.Data;
 
 namespace QuanLyNganHang.BUS_QLNN
 {
@@ -28,9 +29,25 @@ namespace QuanLyNganHang.BUS_QLNN
         {
             return DAL_HopDong.Instance.getNextID();
         }
-        public Boolean suaHopDong(DTO_HopDong hd)
+        public DataTable getDanhSach()
         {
-            return DAL_HopDong.Instance.suaHopDong(hd);
+            return DAL_HopDong.Instance.getDanhSach();
+        }
+
+        public DataTable getDanhSach(int cmnd)
+        {
+            try
+            {
+                return DAL_HopDong.Instance.getDanhSach(cmnd);
+            }
+            catch(Exception)
+            {
+                return null;
+            }
+        }
+        public bool thanhLyHopDong(int mahd)
+        {
+            return DAL_HopDong.Instance.thanhLyHopDong(mahd);
         }
     }
     
