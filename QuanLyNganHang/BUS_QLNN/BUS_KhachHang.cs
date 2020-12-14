@@ -36,7 +36,7 @@ namespace QuanLyNganHang.BUS_QLNN
                 return null;
             }
         }
-        public DTO_KhachHang findOne(int cmnd)
+        public DTO_KhachHang findOne(string cmnd)
         {
             try
             {

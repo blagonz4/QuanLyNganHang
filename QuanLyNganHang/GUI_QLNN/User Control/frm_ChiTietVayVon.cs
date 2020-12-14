@@ -55,7 +55,8 @@ namespace QuanLyNganHang.GUI_QLNN.User_Control
             if (MessageBox.Show("Xác nhận duyệt yêu cầu vay?", "Xác nhận duyệt", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
                 //Sửa lại mã trạng thái của yêu cầu
-                BUS_YeuCauVayVon.Instance.suaYeuCau(new DTO_YeuCauVayVon(int.Parse(MaYeuCau), cmnd, MucDich, int.Parse(ThoiHan), int.Parse(SoTien), int.Parse(KiHan), NgayBatDau, int.Parse(LaiSuat), 1));
+                BUS_YeuCauVayVon.Instance.suaYeuCau(new DTO_YeuCauVayVon(int.Parse(MaYeuCau), cmnd, MucDich, int.Parse(ThoiHan), int.Parse(SoTien), int.Parse(KiHan), NgayBatDau, int.Parse(LaiSuat), 2));
+                us_DuyetYeuCauVayVon.Instance.dgvDanhSachYCVV.DataSource = BUS_YeuCauVayVon.Instance.getDanhSach();
             }
             this.Close();
         }
@@ -65,7 +66,8 @@ namespace QuanLyNganHang.GUI_QLNN.User_Control
             if (MessageBox.Show("Xác nhận không duyệt yêu cầu vay?", "Xác nhận không duyệt", MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
             {
                 //Sửa lại mã trạng thái của yêu cầu
-                BUS_YeuCauVayVon.Instance.suaYeuCau(new DTO_YeuCauVayVon(int.Parse(MaYeuCau), cmnd, MucDich, int.Parse(ThoiHan), int.Parse(SoTien), int.Parse(KiHan), NgayBatDau, int.Parse(LaiSuat), 0));
+                BUS_YeuCauVayVon.Instance.suaYeuCau(new DTO_YeuCauVayVon(int.Parse(MaYeuCau), cmnd, MucDich, int.Parse(ThoiHan), int.Parse(SoTien), int.Parse(KiHan), NgayBatDau, int.Parse(LaiSuat), 5));
+                us_DuyetYeuCauVayVon.Instance.dgvDanhSachYCVV.DataSource = BUS_YeuCauVayVon.Instance.getDanhSach();
             }
             this.Close();
         }

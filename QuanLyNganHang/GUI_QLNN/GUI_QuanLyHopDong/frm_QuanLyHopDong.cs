@@ -56,6 +56,7 @@ namespace QuanLyNganHang.GUI_QLNN
 
         private void btndanhsachycvv_Click(object sender, EventArgs e)
         {
+            us_DanhSachYeuCauVayVon.Instance.dgvDanhSachYCVV.DataSource = BUS_QLNN.BUS_YeuCauVayVon.Instance.getDanhSach();
             if (!pnlMain.Controls.Contains(us_DanhSachYeuCauVayVon.Instance))
             {
                 pnlMain.Controls.Add(us_DanhSachYeuCauVayVon.Instance);

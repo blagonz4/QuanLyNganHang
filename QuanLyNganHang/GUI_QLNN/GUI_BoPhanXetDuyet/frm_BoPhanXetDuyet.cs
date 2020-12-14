@@ -21,7 +21,7 @@ namespace QuanLyNganHang.GUI_QLNN
 
         private void frm_BoPhanXetDuyet_Load(object sender, EventArgs e)
         {
-            us_DuyetYeuCauVayVon.Instance.dgvDanhSachYCVV.DataSource = BUS_KhachHang.Instance.getDanhSach();
+            us_DuyetYeuCauVayVon.Instance.dgvDanhSachYCVV.DataSource = BUS_YeuCauVayVon.Instance.getDanhSach();
 
             if (!pnlMainBPXD.Controls.Contains(us_DuyetYeuCauVayVon.Instance))
             {

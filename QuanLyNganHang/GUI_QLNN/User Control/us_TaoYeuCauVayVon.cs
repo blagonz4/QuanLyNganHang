@@ -67,12 +67,10 @@ namespace QuanLyNganHang.GUI_QLNN.User_Control
             }
             else
             {
-                int KH_cmnd;
-                Int32.TryParse(tbCmnd_KhachHang.Text, out KH_cmnd);
+                string KH_cmnd = tbCmnd_KhachHang.Text;
                 string KH_hoTen = tbHoTen.Text;
                 string KH_diaChi = tbDiaChi.Text;
-                int KH_sdt;
-                Int32.TryParse(tbLaiSuat.Text, out KH_sdt);
+                string KH_sdt = tbSdt.Text;
                 DTO_KhachHang kh = new DTO_KhachHang(KH_cmnd,
                                                      KH_hoTen,
                                                      KH_diaChi,

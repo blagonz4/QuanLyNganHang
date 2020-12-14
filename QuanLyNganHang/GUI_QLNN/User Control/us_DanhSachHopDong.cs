@@ -58,7 +58,7 @@ namespace QuanLyNganHang.GUI_QLNN
         private void btnFind_Click(object sender, EventArgs e)
         {
             if (tbCmnd.Text != "")
-                us_DanhSachHopDong.Instance.dgvDanhSachHD.DataSource = BUS_QLNN.BUS_HopDong.Instance.getDanhSach(int.Parse(tbCmnd.Text));
+                us_DanhSachHopDong.Instance.dgvDanhSachHD.DataSource = BUS_QLNN.BUS_HopDong.Instance.getDanhSachByID(tbCmnd.Text);
             else
                 dgvDanhSachHD.DataSource = BUS_HopDong.Instance.getDanhSach();
         }
@@ -71,7 +71,7 @@ namespace QuanLyNganHang.GUI_QLNN
                 cmnd = dgvDanhSachHD.Rows[e.RowIndex].Cells["cmnd"].Value.ToString();
                 tenkh = dgvDanhSachHD.Rows[e.RowIndex].Cells["name"].Value.ToString();
                 mahd = dgvDanhSachHD.Rows[e.RowIndex].Cells["maHopDong"].Value.ToString();
-                trangthai = dgvDanhSachHD.Rows[e.RowIndex].Cells["trangThai"].Value.ToString();
+                //trangthai = dgvDanhSachHD.Rows[e.RowIndex].Cells["trangThai"].Value.ToString();
             }
         }
 
@@ -83,7 +83,7 @@ namespace QuanLyNganHang.GUI_QLNN
                 cmnd = dgvDanhSachHD.Rows[e.RowIndex].Cells["cmnd"].Value.ToString();
                 tenkh = dgvDanhSachHD.Rows[e.RowIndex].Cells["name"].Value.ToString();
                 mahd = dgvDanhSachHD.Rows[e.RowIndex].Cells["maHopDong"].Value.ToString();
-                trangthai = dgvDanhSachHD.Rows[e.RowIndex].Cells["trangThai"].Value.ToString();
+               // trangthai = dgvDanhSachHD.Rows[e.RowIndex].Cells["trangThai"].Value.ToString();
             }
         }
 

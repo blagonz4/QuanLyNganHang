@@ -67,7 +67,7 @@ namespace QuanLyNganHang.DAL_QLNN
                     {
                         command.Parameters.AddWithValue(key, parameters[key]);
                     }
-                }
+                }    
                 SqlDataAdapter adapter = new SqlDataAdapter(command);
                 adapter.Fill(data);
                 return data;

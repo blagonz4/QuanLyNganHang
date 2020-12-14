@@ -34,7 +34,7 @@ namespace QuanLyNganHang.DAL_QLNN
             param.Add("@cmnd", kh.KhachHang_cmnd.ToString());
             param.Add("@name", kh.KhachHang_name);
             param.Add("@diachi", kh.KhachHang_diachi);
-            param.Add("@phone", kh.KhachHang_phone.ToString());
+            param.Add("@phone", kh.KhachHang_phone);
 
 
             int result = HandleDB.Instance.ExecuteNonQuery(AddQuery, param);
@@ -49,19 +49,20 @@ namespace QuanLyNganHang.DAL_QLNN
             {
                 DataTable dt = new DataTable();
 
-                string LoadQuery = "select KhachHang.cmnd,name,phone,maHopDong,ngayBatDauVay,kiHan,soTienVay,laiSuat"+
-                                    "from KhachHang,YeuCauVayVon,HopDong"+
-                                    "where KhachHang.cmnd = YeuCauVayVon.cmnd and" +
+                string LoadQuery = "select KhachHang.cmnd,name,phone,diachi,maHopDong,ngayBatDauVay,kiHan,soTienVay,laiSuat"+
+                                    " from KhachHang,YeuCauVayVon,HopDong"+
+                                    " where KhachHang.cmnd = YeuCauVayVon.cmnd and" +
                                            " YeuCauVayVon.maYeuCauVayVon = HopDong.maYeuCauVayVon;" ;
                 dt = HandleDB.Instance.ExecuteQuery(LoadQuery, null);
                 return dt;
             }
-            catch (Exception)
+            catch (Exception e)
             {
+                MessageBox.Show(e.ToString());
                 return null;
             }
         }
-        public DTO_KhachHang findOne(int cmnd)
+        public DTO_KhachHang findOne(string cmnd)
         {
             try
             {
@@ -70,12 +71,12 @@ namespace QuanLyNganHang.DAL_QLNN
             Dictionary<string, string> param = new Dictionary<string, string>();
 
             string FindQuery = "select cmnd,name,diachi,phone from KhachHang where cmnd = @cmnd";
-            param.Add("@cmnd", cmnd.ToString());
+            param.Add("@cmnd", cmnd);
 
             dt = HandleDB.Instance.ExecuteQuery(FindQuery, param);
 
             DataRow firstrow = dt.Rows.Cast<DataRow>().FirstOrDefault();
-            DTO_KhachHang result = new DTO_KhachHang(Convert.ToInt32(firstrow["cmnd"]), firstrow["name"].ToString(), firstrow["diachi"].ToString(), Convert.ToInt32(firstrow["phone"]));
+            DTO_KhachHang result = new DTO_KhachHang(firstrow["cmnd"].ToString(), firstrow["name"].ToString(), firstrow["diachi"].ToString(),firstrow["phone"].ToString());
             
             return result;
             }

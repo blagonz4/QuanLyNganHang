@@ -34,11 +34,11 @@ namespace QuanLyNganHang.BUS_QLNN
             return DAL_HopDong.Instance.getDanhSach();
         }
 
-        public DataTable getDanhSach(int cmnd)
+        public DataTable getDanhSachByID(string cmnd)
         {
             try
             {
-                return DAL_HopDong.Instance.getDanhSach(cmnd);
+                return DAL_HopDong.Instance.getDanhSachByID(cmnd);
             }
             catch(Exception)
             {

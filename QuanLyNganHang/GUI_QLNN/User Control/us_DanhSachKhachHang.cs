@@ -89,7 +89,7 @@ namespace QuanLyNganHang.GUI_QLNN.User_Control
                 TenKhachHang = dgvDanhSachKH.Rows[e.RowIndex].Cells["name"].Value.ToString();
                 DiaChi = dgvDanhSachKH.Rows[e.RowIndex].Cells["diachi"].Value.ToString();
                 SoTienVay = dgvDanhSachKH.Rows[e.RowIndex].Cells["soTienVay"].Value.ToString();
-                ThoiHanVay = dgvDanhSachKH.Rows[e.RowIndex].Cells["thoiHanVay"].Value.ToString();
+                //ThoiHanVay = dgvDanhSachKH.Rows[e.RowIndex].Cells["thoiHanVay"].Value.ToString();
                 LaiSuat = dgvDanhSachKH.Rows[e.RowIndex].Cells["laiSuat"].Value.ToString();
                 //MaHopDong = dgvDanhSachKH.Rows[e.RowIndex].Cells["thoiHanVay"].Value.ToString();
 
@@ -115,7 +115,7 @@ namespace QuanLyNganHang.GUI_QLNN.User_Control
         private void btnFind_Click(object sender, EventArgs e)
         {
             if(tbCmnd.Text != "")
-                us_DanhSachKhachHang.Instance.dgvDanhSachKH.DataSource = BUS_QLNN.BUS_KhachHang.Instance.findOne(int.Parse(tbCmnd.Text));
+                us_DanhSachKhachHang.Instance.dgvDanhSachKH.DataSource = BUS_QLNN.BUS_KhachHang.Instance.findOne(tbCmnd.Text);
             else
                 dgvDanhSachKH.DataSource = BUS_KhachHang.Instance.getDanhSach();
         }

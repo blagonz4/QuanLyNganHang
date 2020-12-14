@@ -52,7 +52,9 @@ namespace QuanLyNganHang.DAL_QLNN
             {
                 DataTable dt = new DataTable();
 
-                string LoadQuery = "SELECT * FROM YeuCauVayVon";
+                string LoadQuery = "SELECT maYeuCauVayVon, cmnd, mucDichVayVon, thoiHanVay, soTienVay, ngayBatDauVay, kiHan, laiSuat, tenTrangThai " +
+                    "FROM YeuCauVayVon, TrangThaiYeuCauVayVon " +
+                    "WHERE YeuCauVayVon.trangThai = TrangThaiYeuCauVayVon.matrangThai";
                 dt = HandleDB.Instance.ExecuteQuery(LoadQuery, null);
                 return dt;
             }

@@ -70,8 +70,6 @@ namespace QuanLyNganHang.GUI_QLNN.User_Control
                 ThoiHan = dgvDanhSachYCVV.Rows[e.RowIndex].Cells["thoiHanVay"].Value.ToString();
                 TrangThai = dgvDanhSachYCVV.Rows[e.RowIndex].Cells["trangThai"].Value.ToString();
                 MaYeuCau = dgvDanhSachYCVV.Rows[e.RowIndex].Cells["maYeuCauVayVon"].Value.ToString();
-
-
             }
 
         }
@@ -90,7 +88,7 @@ namespace QuanLyNganHang.GUI_QLNN.User_Control
                 NgayBatDau = dgvDanhSachYCVV.Rows[e.RowIndex].Cells["ngayBatDauVay"].Value.ToString();
                 SoTien = dgvDanhSachYCVV.Rows[e.RowIndex].Cells["soTienVay"].Value.ToString();
                 ThoiHan = dgvDanhSachYCVV.Rows[e.RowIndex].Cells["thoiHanVay"].Value.ToString();
-                TrangThai = dgvDanhSachYCVV.Rows[e.RowIndex].Cells["trangThai"].Value.ToString();
+                //TrangThai = dgvDanhSachYCVV.Rows[e.RowIndex].Cells["trangThai"].Value.ToString();
             }
         }
     }

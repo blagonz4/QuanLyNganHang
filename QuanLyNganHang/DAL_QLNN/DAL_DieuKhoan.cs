@@ -30,7 +30,7 @@ namespace QuanLyNganHang.DAL_QLNN
 
                 string LoadQuery = "select maDieuKhoan, noiDungDieuKhoan " +
                                     "from DieuKhoan " +
-                                    "where DieuKhoan.maHopDong = @maHopDong" +
+                                    "where DieuKhoan.maHopDong = @maHopDong " +
                                     "and maDieuKhoan NOT IN (SELECT maDieuKhoan FROM DieuChinhHopDong)";
 
                 param.Add("@maHopDong", MaHopDong.ToString());

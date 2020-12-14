@@ -40,7 +40,7 @@ namespace QuanLyNganHang.DAL_QLNN
             return nextID;
         }
 
-        public DataTable getDanhSach(int cmnd)
+        public DataTable getDanhSachByID(string cmnd)
         {
             try
             {
@@ -51,7 +51,7 @@ namespace QuanLyNganHang.DAL_QLNN
                                     " where KhachHang.cmnd = YeuCauVayVon.cmnd and" +
                                     " YeuCauVayVon.maYeuCauVayVon = HopDong.maYeuCauVayVon and" +
                                     " KhachHang.cmnd = @cmnd";
-                param.Add("@cmnd", cmnd.ToString());
+                param.Add("@cmnd", cmnd);
                 dt = HandleDB.Instance.ExecuteQuery(LoadQuery, param);
                 return dt;
             }
@@ -98,14 +98,15 @@ namespace QuanLyNganHang.DAL_QLNN
                 DataTable dt = new DataTable();
 
                 string LoadQuery = "select KhachHang.cmnd,name,phone,maHopDong,ngayBatDauVay,kiHan,soTienVay,laiSuat" +
-                                    "from KhachHang,YeuCauVayVon,HopDong,trangThai" +
-                                    "where KhachHang.cmnd = YeuCauVayVon.cmnd and" +
-                                           " YeuCauVayVon.maYeuCauVayVon = HopDong.maYeuCauVayVon;";
+                                    " from KhachHang,YeuCauVayVon,HopDong" +
+                                    " where KhachHang.cmnd = YeuCauVayVon.cmnd and" +
+                                           " YeuCauVayVon.maYeuCauVayVon = HopDong.maYeuCauVayVon";
                 dt = HandleDB.Instance.ExecuteQuery(LoadQuery, null);
                 return dt;
             }
-            catch (Exception)
+            catch (Exception e)
             {
+                MessageBox.Show(e.ToString());
                 return null;
             }
         }
