@@ -43,6 +43,7 @@ namespace QuanLyNganHang.DAL_QLNN
             int result = HandleDB.Instance.ExecuteNonQuery(AddQuery, param);
             if (result > 0)
             {
+                MessageBox.Show("Thêm YCVV thành công");
                 Console.WriteLine("Thêm YCVV thành công");
             }
         }
@@ -52,7 +53,7 @@ namespace QuanLyNganHang.DAL_QLNN
             {
                 DataTable dt = new DataTable();
 
-                string LoadQuery = "SELECT maYeuCauVayVon, cmnd, mucDichVayVon, thoiHanVay, soTienVay, ngayBatDauVay, kiHan, laiSuat, tenTrangThai " +
+                string LoadQuery = "SELECT maYeuCauVayVon, cmnd, mucDichVayVon, thoiHanVay, soTienVay, ngayBatDauVay, kiHan, laiSuat, tenTrangThai, maTrangThai " +
                     "FROM YeuCauVayVon, TrangThaiYeuCauVayVon " +
                     "WHERE YeuCauVayVon.trangThai = TrangThaiYeuCauVayVon.matrangThai";
                 dt = HandleDB.Instance.ExecuteQuery(LoadQuery, null);
@@ -97,6 +98,7 @@ namespace QuanLyNganHang.DAL_QLNN
             }
             catch(Exception err)
             {
+                MessageBox.Show(err.Message);
                 return false;
             }
             return true;

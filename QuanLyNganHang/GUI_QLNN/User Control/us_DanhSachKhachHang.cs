@@ -45,8 +45,13 @@ namespace QuanLyNganHang.GUI_QLNN.User_Control
             if (cmnd == "")
                 return;
             var words = new Dictionary<string, string>(); ;
-            words.Add("<cmnd>", "12345");
-            words.Add("<TenKhachHang>", "Nguyen Van A");
+            words.Add("<cmnd>", cmnd);
+            words.Add("<TenKhachHang>", TenKhachHang);
+            words.Add("<DiaChi>", DiaChi);
+            words.Add("<SoTienVay>", SoTienVay);
+            words.Add("<LaiSuat>", LaiSuat);
+            words.Add("<MaHopDong>", MaHopDong);
+
             try
             {
                 ReplaceWord(words);

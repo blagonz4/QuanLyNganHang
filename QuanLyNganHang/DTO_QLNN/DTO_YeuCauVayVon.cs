@@ -13,7 +13,7 @@ namespace QuanLyNganHang.DTO_QLNN
         private string _YCVV_cmnd;
         private string _YCVV_mucdich;//3
         private int _YCVV_thoiHanVay;
-        private int _YCVV_soTienVay;//5
+        private long _YCVV_soTienVay;//5
         private int _YCVV_kiHan;
         private string _YCVV_ngayBatDauVay;//7
         private float _YCVV_laisuat;
@@ -39,7 +39,7 @@ namespace QuanLyNganHang.DTO_QLNN
             get => _YCVV_thoiHanVay;
             set => _YCVV_thoiHanVay = value;
         }
-        public int YCVV_soTienVay
+        public long YCVV_soTienVay
         {
             get => _YCVV_soTienVay;
             set => _YCVV_soTienVay = value;
@@ -69,7 +69,7 @@ namespace QuanLyNganHang.DTO_QLNN
             string cmnd,
             string mucdich,//3
             int thoihan,
-            int sotien,//5
+            long sotien,//5
             int kihan,
             string ngayvay,//7
             float laisuat,

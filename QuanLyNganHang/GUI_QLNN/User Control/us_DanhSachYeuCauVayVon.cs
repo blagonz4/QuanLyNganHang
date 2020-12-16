@@ -21,7 +21,7 @@ namespace QuanLyNganHang.GUI_QLNN.User_Control
         public static string ThoiHan;
         public static string TrangThai;
         public static string cmnd;
-
+        public static string maTrangThai;
 
         private static us_DanhSachYeuCauVayVon _instance;
         public static us_DanhSachYeuCauVayVon Instance
@@ -40,15 +40,17 @@ namespace QuanLyNganHang.GUI_QLNN.User_Control
 
         private void btnsuaYeuCau_Click(object sender, EventArgs e)
         {
-
+            if (cmnd == null)
+                return;
             frm_SuaYeuCauVayVon frm = new frm_SuaYeuCauVayVon();
-            frm.tbKiHan.Text = KiHan;
-            frm.tbLaiSuat.Text = LaiSuat;
+            frm.cbKiHan.Text = KiHan;
+            frm.nmLaiSuat.Text = LaiSuat;
             frm.tbMucDich.Text = MucDich;
-            frm.tbNgayBatDau.Text = NgayBatDau;
-            frm.tbSoTien.Text = SoTien;
-            frm.tbThoiHan.Text = ThoiHan; 
+            frm.dtpNgayBatDau.Value = DateTime.Parse(NgayBatDau);
+            frm.nmSoTien.Value = Decimal.Parse(SoTien);
+            frm.cbThoiHan.Text = ThoiHan; 
             frm.tbTrangThai.Text = TrangThai;
+            frm.maTrangThai = int.Parse(maTrangThai);
             frm.tbCmnd.Text = cmnd;
             frm.tbMaYeuCau.Text = MaYeuCau;
             frm.Show();
@@ -68,7 +70,8 @@ namespace QuanLyNganHang.GUI_QLNN.User_Control
                 NgayBatDau = dgvDanhSachYCVV.Rows[e.RowIndex].Cells["ngayBatDauVay"].Value.ToString();
                 SoTien = dgvDanhSachYCVV.Rows[e.RowIndex].Cells["soTienVay"].Value.ToString();
                 ThoiHan = dgvDanhSachYCVV.Rows[e.RowIndex].Cells["thoiHanVay"].Value.ToString();
-                TrangThai = dgvDanhSachYCVV.Rows[e.RowIndex].Cells["trangThai"].Value.ToString();
+                TrangThai = dgvDanhSachYCVV.Rows[e.RowIndex].Cells["tenTrangThai"].Value.ToString();
+                maTrangThai = dgvDanhSachYCVV.Rows[e.RowIndex].Cells["maTrangThai"].Value.ToString();
                 MaYeuCau = dgvDanhSachYCVV.Rows[e.RowIndex].Cells["maYeuCauVayVon"].Value.ToString();
             }
 
@@ -88,7 +91,8 @@ namespace QuanLyNganHang.GUI_QLNN.User_Control
                 NgayBatDau = dgvDanhSachYCVV.Rows[e.RowIndex].Cells["ngayBatDauVay"].Value.ToString();
                 SoTien = dgvDanhSachYCVV.Rows[e.RowIndex].Cells["soTienVay"].Value.ToString();
                 ThoiHan = dgvDanhSachYCVV.Rows[e.RowIndex].Cells["thoiHanVay"].Value.ToString();
-                //TrangThai = dgvDanhSachYCVV.Rows[e.RowIndex].Cells["trangThai"].Value.ToString();
+                TrangThai = dgvDanhSachYCVV.Rows[e.RowIndex].Cells["tenTrangThai"].Value.ToString();
+                maTrangThai = dgvDanhSachYCVV.Rows[e.RowIndex].Cells["maTrangThai"].Value.ToString();
             }
         }
     }

@@ -72,7 +72,7 @@ namespace QuanLyNganHang.DAL_QLNN
                 UpdateQuery += "SET trangThai = @trangThaiMoi ";
                 UpdateQuery += "WHERE maYeuCauVayVon = @maycvv ";
 
-                param.Add("@trangThaiMoi", "Đã thanh lý hợp đồng");
+                param.Add("@trangThaiMoi", "6");
                 param.Add("@maycvv", mahd.ToString());
 
 
@@ -84,7 +84,7 @@ namespace QuanLyNganHang.DAL_QLNN
                 }
                 else return false;
             }
-            catch (NullReferenceException)
+            catch (Exception)
             {
                 return false;
             }

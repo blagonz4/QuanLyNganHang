@@ -22,7 +22,7 @@ namespace QuanLyNganHang.DAL_QLNN
                 return _instance;
             }
         }
-        public void themKhachHang(DTO_KhachHang kh)
+        public bool themKhachHang(DTO_KhachHang kh)
         {
             Dictionary<string, string> param = new Dictionary<string, string>();
 
@@ -41,7 +41,9 @@ namespace QuanLyNganHang.DAL_QLNN
             if (result > 0)
             {
                 Console.WriteLine("Thêm khách hàng thành công");
+                return true;
             }
+            return false;
         }
         public DataTable getDanhSach()
         {
@@ -80,7 +82,7 @@ namespace QuanLyNganHang.DAL_QLNN
             
             return result;
             }
-            catch (Exception)
+            catch (NullReferenceException)
             {
                 return null;
             }

@@ -21,9 +21,9 @@ namespace QuanLyNganHang.BUS_QLNN
                 return _instance;
             }
         }
-        public void themKhachHang(DTO_KhachHang kh)
+        public bool themKhachHang(DTO_KhachHang kh)
         {
-            DAL_KhachHang.Instance.themKhachHang(kh);
+            return DAL_KhachHang.Instance.themKhachHang(kh);
         }
         public DataTable getDanhSach()
         {
